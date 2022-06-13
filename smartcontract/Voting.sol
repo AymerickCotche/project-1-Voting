@@ -31,8 +31,8 @@ contract Voting is Ownable {
     // Initialize the status to Registering Voters
     WorkflowStatus public voteStatus = WorkflowStatus.RegisteringVoters;
 
-    // Mapping to list all user and toggle the whilisted variable (isRegistered)
-    mapping(address => Voter) whitelist;
+    // Mapping to list all user and toggle the whilisted variable (isRegistered). All voters can see these informations
+    mapping(address => Voter) public whitelist;
 
     // Array to register all user's proposals
     Proposal[] public proposals;
